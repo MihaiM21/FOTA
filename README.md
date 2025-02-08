@@ -1,5 +1,5 @@
 <p align=center>
-<img src="Fota/lib/logo.png" width="200">
+<img src="FOTA/lib/logo.png" width="200">
 </p>
 
 <h1 align="center">Formula One Telemetry Analysis - FOTA</h1>
@@ -103,15 +103,15 @@ Whether you're a Formula One enthusiast, a data analyst, or a racing engineer, F
 
 ## Examples of Plots Generated with FOTA
 <p align=center>
-    <img src="Fota/lib/2024 Spanish Grand Prix HAM vs VER Fastest Lap Comparison.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand Prix Laptimes distribution.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand Prix Tyre strategy.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand Prix VER Laptimes.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand Prix VER vs HAM.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand PrixTop speed comparison.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand PrixPosition changes.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand PrixTeam pace.png" width="800">
-    <img src="Fota/lib/2024 Spanish Grand PrixThrottle graph.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand Prix HAM vs VER Fastest Lap Comparison.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand Prix Laptimes distribution.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand Prix Tyre strategy.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand Prix VER Laptimes.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand Prix VER vs HAM.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand PrixTop speed comparison.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand PrixPosition changes.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand PrixTeam pace.png" width="800">
+    <img src="FOTA/lib/2024 Spanish Grand PrixThrottle graph.png" width="800">
 </p>
 
 ---
