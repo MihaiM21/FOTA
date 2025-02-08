@@ -16,7 +16,7 @@
                 <ComboBox x:Name="PlotTypeComboBox" Width="200" Margin="20,0,0,0">
                     <ComboBoxItem Content="Choose a plot type"/>
                     <ComboBoxItem Content="TopSpeed"/>
-                    <ComboBoxItem Content="ThrottleGraph"/>
+                    <ComboBoxItem Content="Throttle Graph"/>
                     <ComboBoxItem Content="Strategy"/>
                     <ComboBoxItem Content="DriversTrackComparison"/>
                     <ComboBoxItem Content="TeamPace"/>
@@ -69,22 +69,86 @@
             <!-- Drivers and Teams -->
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="D1TextBlock" Text="Driver 1:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Driver1ComboBox" Width="120" Margin="27,0,0,0"/>
+                <ComboBox x:Name="Driver1ComboBox" Width="120" Margin="27,0,0,0">
+                    <ComboBoxItem Content="HAM"/>
+                    <ComboBoxItem Content="LEC"/>
+                    <ComboBoxItem Content="VER"/>
+                    <ComboBoxItem Content="LAW"/>
+                    <ComboBoxItem Content="NOR"/>
+                    <ComboBoxItem Content="PIA"/>
+                    <ComboBoxItem Content="ALO"/>
+                    <ComboBoxItem Content="STR"/>
+                    <ComboBoxItem Content="SAI"/>
+                    <ComboBoxItem Content="ALB"/>
+                    <ComboBoxItem Content="RUS"/>
+                    <ComboBoxItem Content="ANT"/>
+                    <ComboBoxItem Content="GAS"/>
+                    <ComboBoxItem Content="DOO"/>
+                    <ComboBoxItem Content="HAD"/>
+                    <ComboBoxItem Content="TSU"/>
+                    <ComboBoxItem Content="OCO"/>
+                    <ComboBoxItem Content="BEA"/>
+                    <ComboBoxItem Content="HUL"/>
+                    <ComboBoxItem Content="BOR"/>
+                </ComboBox>
             </StackPanel> 
             
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="T1TextBlock" Text="Team 1:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Team1ComboBox" Width="120" Margin="31,0,0,0"/>
+                <ComboBox x:Name="Team1ComboBox" Width="120" Margin="31,0,0,0">
+                    <ComboBoxItem Content="FER"/>
+                    <ComboBoxItem Content="MER"/>
+                    <ComboBoxItem Content="RBR"/>
+                    <ComboBoxItem Content="MCL"/>
+                    <ComboBoxItem Content="AST"/>
+                    <ComboBoxItem Content="WIL"/>
+                    <ComboBoxItem Content="HAA"/>
+                    <ComboBoxItem Content="ALP"/>
+                    <ComboBoxItem Content="SAU"/>
+                    <ComboBoxItem Content="VCA"/>
+                </ComboBox>    
             </StackPanel> 
             
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="D2TextBlock" Text="Driver 2:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Driver2ComboBox" Width="120" Margin="27,0,0,0"/>
+                <ComboBox x:Name="Driver2ComboBox" Width="120" Margin="27,0,0,0">
+                    <ComboBoxItem Content="HAM"/>
+                    <ComboBoxItem Content="LEC"/>
+                    <ComboBoxItem Content="VER"/>
+                    <ComboBoxItem Content="LAW"/>
+                    <ComboBoxItem Content="NOR"/>
+                    <ComboBoxItem Content="PIA"/>
+                    <ComboBoxItem Content="ALO"/>
+                    <ComboBoxItem Content="STR"/>
+                    <ComboBoxItem Content="SAI"/>
+                    <ComboBoxItem Content="ALB"/>
+                    <ComboBoxItem Content="RUS"/>
+                    <ComboBoxItem Content="ANT"/>
+                    <ComboBoxItem Content="GAS"/>
+                    <ComboBoxItem Content="DOO"/>
+                    <ComboBoxItem Content="HAD"/>
+                    <ComboBoxItem Content="TSU"/>
+                    <ComboBoxItem Content="OCO"/>
+                    <ComboBoxItem Content="BEA"/>
+                    <ComboBoxItem Content="HUL"/>
+                    <ComboBoxItem Content="BOR"/>
+                </ComboBox>    
             </StackPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="T2TextBlock" Text="Team 2:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Team2ComboBox" Width="120" Margin="31,0,0,0"/>
+                <ComboBox x:Name="Team2ComboBox" Width="120" Margin="31,0,0,0">
+                    <ComboBoxItem Content="FER"/>
+                    <ComboBoxItem Content="MER"/>
+                    <ComboBoxItem Content="RBR"/>
+                    <ComboBoxItem Content="MCL"/>
+                    <ComboBoxItem Content="AST"/>
+                    <ComboBoxItem Content="WIL"/>
+                    <ComboBoxItem Content="HAA"/>
+                    <ComboBoxItem Content="ALP"/>
+                    <ComboBoxItem Content="SAU"/>
+                    <ComboBoxItem Content="VCA"/>
+                </ComboBox>    
             </StackPanel>
             
             <!-- Execute Button -->
