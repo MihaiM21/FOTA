@@ -118,6 +118,17 @@ namespace FOTA
             string driver2 = Driver2ComboBox.Text;
             string team1 = Team1ComboBox.Text;
             string team2 = Team2ComboBox.Text;
+            
+            // Printing the sent data
+            Console.WriteLine(plotType);
+            Console.WriteLine(year);
+            Console.WriteLine(round);
+            Console.WriteLine(eventType);
+            Console.WriteLine(token);
+            Console.WriteLine(driver1);
+            Console.WriteLine(driver2);
+            Console.WriteLine(team1);
+            Console.WriteLine(team2);
 
             if (string.IsNullOrEmpty(plotType) || string.IsNullOrEmpty(year) || string.IsNullOrEmpty(round) || string.IsNullOrEmpty(eventType) || string.IsNullOrEmpty(token))
             {
@@ -196,10 +207,21 @@ namespace FOTA
             RoundComboBox.Text = "Choose a race round";
             EventTypeComboBox.Text = "Choose an event";
             
+            // Setting the Driver1/2 and Team1/2 not vissible at the start of the program
+            Driver1ComboBox.Visibility = Visibility.Collapsed;
+            Driver2ComboBox.Visibility = Visibility.Collapsed;
+            Team1ComboBox.Visibility = Visibility.Collapsed;
+            Team2ComboBox.Visibility = Visibility.Collapsed;
+            D1TextBlock.Visibility = Visibility.Collapsed;
+            D2TextBlock.Visibility = Visibility.Collapsed;
+            T1TextBlock.Visibility = Visibility.Collapsed;
+            T2TextBlock.Visibility = Visibility.Collapsed;
+            
         }
         private string ExtractRoundNumber(string roundText)
         {
-            // Folosește o expresie regulată pentru a extrage numerele
+            // Extract only the numbers from the text
+            // Used to send only the round number to the server
             Match match = Regex.Match(roundText, @"\d+");
             return match.Success ? match.Value : string.Empty;
         }
