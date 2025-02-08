@@ -1,12 +1,100 @@
 ﻿<Window x:Class="FOTA.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FOTA"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FOTA Telemetry App" Height="720" Width="1280"
+        MinHeight="720" MinWidth="1280">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0" Margin="10" HorizontalAlignment="Center">
+            <!-- Plot Type -->
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock Text="Plot Type:" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                <ComboBox x:Name="PlotTypeComboBox" Width="200" Margin="20,0,0,0">
+                    <ComboBoxItem Content="Choose a plot type"/>
+                    <ComboBoxItem Content="TopSpeed"/>
+                    <ComboBoxItem Content="ThrottleGraph"/>
+                    <ComboBoxItem Content="Strategy"/>
+                    <ComboBoxItem Content="DriversTrackComparison"/>
+                    <ComboBoxItem Content="TeamPace"/>
+                    <ComboBoxItem Content="PositionChanges"/>
+                    <ComboBoxItem Content="OneDriverLaptimes"/>
+                    <ComboBoxItem Content="DriversLaptimesDistribution"/>
+                    <ComboBoxItem Content="SpeedTraces"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Year -->
+            <StackPanel Orientation="Horizontal" Margin="0, 5"> 
+                <TextBlock Text="Year:" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                <ComboBox x:Name="YearComboBox" Width="200" Margin="46,0,0,0" SelectionChanged="YearComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Choose an year"/>
+                    <ComboBoxItem Content="2025"/>
+                    <ComboBoxItem Content="2024"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Round -->
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock Text="Round:" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                <ComboBox x:Name="RoundComboBox" Width="200" Margin="34,0,0,0">
+                    
+                </ComboBox>
+            </StackPanel>    
+
+            <!-- Event Type -->
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock Text="Event Type:" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                <ComboBox x:Name="EventTypeComboBox" Width="200" Margin="11,0,0,0">
+                    <ComboBoxItem Content="Choose an event"/>
+                    <ComboBoxItem Content="FP1"/>
+                    <ComboBoxItem Content="FP2"/>
+                    <ComboBoxItem Content="FP3"/>
+                    <ComboBoxItem Content="Q"/>
+                    <ComboBoxItem Content="SQ"/>
+                    <ComboBoxItem Content="R"/>
+                    <ComboBoxItem Content="S"/>
+                </ComboBox>
+            </StackPanel> 
+            
+            <!-- Token -->
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock Text="Token:" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                <TextBox x:Name="TokenTextBox" Width="200" Margin="37,0,0,0"/>
+            </StackPanel> 
+            
+            <!-- Drivers and Teams -->
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock x:Name="D1TextBlock" Text="Driver 1:" Margin="0,0,0,0"/>
+                <ComboBox x:Name="Driver1ComboBox" Width="120" Margin="27,0,0,0"/>
+            </StackPanel> 
+            
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock x:Name="T1TextBlock" Text="Team 1:" Margin="0,0,0,0"/>
+                <ComboBox x:Name="Team1ComboBox" Width="120" Margin="31,0,0,0"/>
+            </StackPanel> 
+            
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock x:Name="D2TextBlock" Text="Driver 2:" Margin="0,0,0,0"/>
+                <ComboBox x:Name="Driver2ComboBox" Width="120" Margin="27,0,0,0"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0, 5">
+                <TextBlock x:Name="T2TextBlock" Text="Team 2:" Margin="0,0,0,0"/>
+                <ComboBox x:Name="Team2ComboBox" Width="120" Margin="31,0,0,0"/>
+            </StackPanel>
+            
+            <!-- Execute Button -->
+            <Button Content="Generate Plot" Margin="0,10,0,0" Width="120" Click="ExecuteRequest_Click"/>
+            <Button Content="Download Image" Width="150" Margin="0,10,0,0" HorizontalAlignment="Center" Click="DownloadImage_Click"/>
+        </StackPanel>
+
+        <!-- Plot Image and Download Button -->
+        <StackPanel Grid.Column="1" Margin="10">
+            <Image x:Name="PlotImage" Width="Auto" Height="600" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>
     </Grid>
 </Window>

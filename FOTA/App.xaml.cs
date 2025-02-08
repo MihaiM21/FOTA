@@ -10,4 +10,3 @@ namespace FOTA;
 public partial class App : Application
 {
 }
-
