@@ -69,7 +69,7 @@
             <!-- Drivers and Teams -->
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="D1TextBlock" Text="Driver 1:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Driver1ComboBox" Width="120" Margin="27,0,0,0">
+                <ComboBox x:Name="Driver1ComboBox" Width="120" Margin="27,0,0,0" SelectionChanged="Driver1ComboBox_SelectionChanged">
                     <ComboBoxItem Content="HAM"/>
                     <ComboBoxItem Content="LEC"/>
                     <ComboBoxItem Content="VER"/>

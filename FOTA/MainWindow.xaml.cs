@@ -128,6 +128,36 @@ namespace FOTA
             });
             
         }
+        
+        // Update the driver list when changing the Driver 1 so you can't select the same driver twice
+        private void Driver1ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Dispatcher.InvokeAsync(() =>
+            {
+                string driver1 = Driver1ComboBox.Text;
+                Driver2ComboBox.Items.Clear();
+                if (YearComboBox.Text == "2025")
+                {
+                    foreach (var driver in _driversList.drivers2025)
+                    {
+                        if (driver.Value != driver1)
+                        {
+                            Driver2ComboBox.Items.Add(driver.Value);
+                        }
+                    }
+                }
+                if (YearComboBox.Text == "2024")
+                {
+                    foreach (var driver in _driversList.drivers2024)
+                    {
+                        if (driver.Value != driver1)
+                        {
+                            Driver2ComboBox.Items.Add(driver.Value);
+                        }
+                    }
+                }
+            });
+        }
 
         private async void ExecuteRequest_Click(object sender, RoutedEventArgs e)
         {
