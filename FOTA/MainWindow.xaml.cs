@@ -7,7 +7,6 @@ using Microsoft.Win32;
 using System.Net.Http.Json;
 using System.IO;
 using System.Text.RegularExpressions;
-using static FOTA.RoundNumber;
 
 namespace FOTA
 {
@@ -16,6 +15,7 @@ namespace FOTA
         private readonly HttpClient _httpClient = new HttpClient();
         private byte[] _imageData; // image data storage variable
         private static RoundNumber _roundNumber = new RoundNumber();
+        private static driversList _driversList = new driversList();
 
         public MainWindow()
         {
@@ -65,7 +65,16 @@ namespace FOTA
             RoundComboBox.Items.Clear();
             RoundComboBox.Items.Add("Choose a race round");
             RoundComboBox.Text = "Choose a race round";
-
+            
+            // Clear the driver1 and driver2 list
+            Driver1ComboBox.Items.Clear();
+            Driver1ComboBox.Items.Add("Driver 1");
+            
+            Driver2ComboBox.Items.Clear();
+            Driver2ComboBox.Items.Add("Driver 2");
+            
+            
+            //
             Dispatcher.InvokeAsync(() =>
             {
                 // Get the selected year
@@ -74,16 +83,30 @@ namespace FOTA
 
                 if (selectedYear == "2025")
                 {
+                    // Adding the race names and number for the 2025 year
                     foreach (var race in _roundNumber.Races2025)
                     {
                         RoundComboBox.Items.Add($"R{race.Key} - {race.Value}");
                     }
+                    // Adding the correct drivers from the 2025 year
+                    foreach (var driver in _driversList.drivers2025)
+                    {
+                        Driver1ComboBox.Items.Add(driver.Value);
+                        Driver2ComboBox.Items.Add(driver.Value);
+                    }
                 }
                 else if (selectedYear == "2024")
                 {
+                    // Adding the race names and number for the 2024 year
                     foreach (var race in _roundNumber.Races2024)
                     {
                         RoundComboBox.Items.Add($"R{race.Key} - {race.Value}");
+                    }
+                    // Adding the correct drivers from the 2024 year
+                    foreach (var driver in _driversList.drivers2024)
+                    {
+                        Driver1ComboBox.Items.Add(driver.Value);
+                        Driver2ComboBox.Items.Add(driver.Value);
                     }
                 }
                 else if (selectedYear == "Choose an year")
