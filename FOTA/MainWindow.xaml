@@ -1,8 +1,14 @@
-﻿<Window x:Class="FOTA.MainWindow"
+﻿
+
+<Window x:Class="FOTA.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FOTA Telemetry App" Height="720" Width="1280"
-        MinHeight="720" MinWidth="1280">
+        MinHeight="720" MinWidth="1280"
+        Background="#262525"
+        FontStyle="Normal"
+        Foreground="White">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -13,7 +19,8 @@
             <!-- Plot Type -->
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock Text="Plot Type:" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                <ComboBox x:Name="PlotTypeComboBox" Width="200" Margin="20,0,0,0">
+                <ComboBox x:Name="PlotTypeComboBox" Width="200" Margin="20,0,0,0" >
+                    
                     <ComboBoxItem Content="Choose a plot type"/>
                     <ComboBoxItem Content="TopSpeed"/>
                     <ComboBoxItem Content="Throttle Graph"/>
