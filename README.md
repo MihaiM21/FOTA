@@ -48,7 +48,7 @@ Whether you're a Formula One enthusiast, a data analyst, or a racing engineer, F
 ## Installation Steps
 
 ### For regular users
-1. Download the release version and install it(Release ETA 01/03/2025)
+1. Download the release version and install it (Release ETA ~ 01/03/2025)
 
 ### For Developers
 

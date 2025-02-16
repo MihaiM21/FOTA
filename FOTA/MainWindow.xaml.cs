@@ -161,7 +161,7 @@ namespace FOTA
 
         private async void ExecuteRequest_Click(object sender, RoutedEventArgs e)
         {
-            string baseUrl = "http://127.0.0.1:5000/generate_plot";
+            string baseUrl = "https://api.t1f1.com/generate_plot";
             string plotType = PlotTypeComboBox.Text;
             string year = YearComboBox.Text;
             string round = ExtractRoundNumber(RoundComboBox.Text);
