@@ -22,15 +22,15 @@
                 <ComboBox x:Name="PlotTypeComboBox" Width="200" Margin="20,0,0,0" >
                     
                     <ComboBoxItem Content="Choose a plot type"/>
-                    <ComboBoxItem Content="TopSpeed"/>
-                    <ComboBoxItem Content="Throttle Graph"/>
+                    <ComboBoxItem Content="Top speed"/>
+                    <ComboBoxItem Content="Throttle graph"/>
                     <ComboBoxItem Content="Strategy"/>
-                    <ComboBoxItem Content="DriversTrackComparison"/>
-                    <ComboBoxItem Content="TeamPace"/>
-                    <ComboBoxItem Content="PositionChanges"/>
-                    <ComboBoxItem Content="OneDriverLaptimes"/>
-                    <ComboBoxItem Content="DriversLaptimesDistribution"/>
-                    <ComboBoxItem Content="SpeedTraces"/>
+                    <ComboBoxItem Content="Drivers track comparison"/>
+                    <ComboBoxItem Content="Team pace"/>
+                    <ComboBoxItem Content="Position changes"/>
+                    <ComboBoxItem Content="Driver laptimes"/>
+                    <ComboBoxItem Content="Drivers laptimes distribution"/>
+                    <ComboBoxItem Content="Speed trace"/>
                 </ComboBox>
             </StackPanel>
 
