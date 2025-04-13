@@ -122,7 +122,6 @@ Whether you're a Formula One enthusiast, a data analyst, or a racing engineer, F
 For questions or support, feel free to reach out:
 
 - **Email**: mihai@t1f1.com
-- **GitHub**: MihaiM21(https://github.com/MihaiM21)
 
 <p align=center>
 <b>Powered by TurnOneOfficial</b>
