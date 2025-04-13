@@ -271,7 +271,7 @@
             
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="T1TextBlock" Text="Team 1:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Team1ComboBox" Width="120" Margin="31,0,0,0">
+                <ComboBox x:Name="Team1ComboBox" Width="120" Margin="30,0,0,0">
                     <ComboBoxItem Content="FER"/>
                     <ComboBoxItem Content="MER"/>
                     <ComboBoxItem Content="RBR"/>
@@ -313,7 +313,7 @@
             
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock x:Name="T2TextBlock" Text="Team 2:" Margin="0,0,0,0"/>
-                <ComboBox x:Name="Team2ComboBox" Width="120" Margin="31,0,0,0">
+                <ComboBox x:Name="Team2ComboBox" Width="120" Margin="30,0,0,0">
                     <ComboBoxItem Content="FER"/>
                     <ComboBoxItem Content="MER"/>
                     <ComboBoxItem Content="RBR"/>
