@@ -7,7 +7,8 @@
         MinHeight="720" MinWidth="1280"
         Background="#262525"
         FontStyle="Normal"
-        Foreground="White">
+        Foreground="White"
+        ResizeMode="NoResize">
     
     <Window.Resources>
         <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
@@ -335,5 +336,14 @@
         <StackPanel Grid.Column="1" Margin="10">
             <Image x:Name="PlotImage" Width="Auto" Height="600" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </StackPanel>
+        <!-- Progress bar -->
+        <ProgressBar Grid.Column="1" x:Name="ProgressBar"
+                     Height="20"
+                     Width="240"
+                     Margin="0,10,0,0"
+                     Visibility="Collapsed"
+                     IsIndeterminate="True"
+                     Foreground="#ff2b2a"
+                     Background="#262525"/>
     </Grid>
 </Window>
