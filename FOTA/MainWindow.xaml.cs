@@ -16,7 +16,9 @@ namespace FOTA
         private byte[] _imageData; // image data storage variable
         private static RoundNumber _roundNumber = new RoundNumber();
         private static driversList _driversList = new driversList();
-
+        
+        
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace FOTA
             {
                 string selectedPlot = PlotTypeComboBox.Text;
                 Console.WriteLine(selectedPlot);
-                if (selectedPlot == "DriversTrackComparison" || selectedPlot == "SpeedTraces" || selectedPlot == "Throttle Graph" || selectedPlot == "Choose a plot type")
+                if (selectedPlot == "Drivers track comparison" || selectedPlot == "Speed traces" || selectedPlot == "Throttle graph" || selectedPlot == "Choose a plot type")
                 {
                     Driver1ComboBox.Visibility = Visibility.Visible;
                     Driver2ComboBox.Visibility = Visibility.Visible;
@@ -54,6 +56,7 @@ namespace FOTA
                     T2TextBlock.Visibility = Visibility.Collapsed;
                 }
             });
+            
             
 
         }
@@ -201,7 +204,10 @@ namespace FOTA
                 team1 = team1,
                 team2 = team2
             };
-
+            // Showing the Loading Bar
+            ProgressBar.Visibility = Visibility.Visible;
+            // Removing the old Plot Image
+            PlotImage.Visibility = Visibility.Collapsed;
             try
             {
                 HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrl, requestBody);
@@ -216,11 +222,18 @@ namespace FOTA
                     bitmap.CacheOption = BitmapCacheOption.OnLoad;
                     bitmap.EndInit();
                 }
-
+                // Removing the Loading Bar
+                ProgressBar.Visibility = Visibility.Collapsed;
+                //Showing the image generated
+                PlotImage.Visibility = Visibility.Visible;
                 PlotImage.Source = bitmap;
+                
             }
             catch (Exception ex)
             {
+                // Removing the Loading Bar
+                ProgressBar.Visibility = Visibility.Collapsed;
+                // Showing the error
                 MessageBox.Show($"Error: {ex.Message}", "Request Failed", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
