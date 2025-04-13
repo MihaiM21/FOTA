@@ -103,15 +103,16 @@ Whether you're a Formula One enthusiast, a data analyst, or a racing engineer, F
 
 ## Examples of Plots Generated with FOTA
 <p align=center>
-    <img src="FOTA/lib/2024 Spanish Grand Prix HAM vs VER Fastest Lap Comparison.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand Prix Laptimes distribution.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand Prix Tyre strategy.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand Prix VER Laptimes.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand Prix VER vs HAM.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand PrixTop speed comparison.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand PrixPosition changes.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand PrixTeam pace.png" width="800">
-    <img src="FOTA/lib/2024 Spanish Grand PrixThrottle graph.png" width="800">
+    <img src="FOTA/lib/Driver Analysis 2025 Bahrain Grand Prix VER Qualifying.png" width="800">
+    <img src="FOTA/lib/2025 Bahrain Grand Prix Quali results.png" width="800">
+    <img src="FOTA/lib/Top speed comparison 2025 Bahrain Grand Prix Qualifying .png" width="800">
+    <img src="FOTA/lib/Bahrain Grand Prix Qualifying 2025 LEC vs VER.png" width="800">
+    <img src="FOTA/lib/2025 Japanese Grand Prix Tyre strategy.png" width="800">
+    <img src="FOTA/lib/2025 Japanese Grand Prix Team pace.png" width="800">
+    <img src="FOTA/lib/2025 Japanese Grand Prix Position changes.png" width="800">
+    <img src="FOTA/lib/2025 Japanese Grand Prix LEC vs VER Fastest Lap Comparison.png" width="800">
+    <img src="FOTA/lib/2025 Japanese Grand Prix Laptimes distribution.png" width="800">
+    <img src="FOTA/lib/2025 Bahrain Grand Prix Throttle comparison.png" width="800">
 </p>
 
 ---
@@ -121,7 +122,6 @@ Whether you're a Formula One enthusiast, a data analyst, or a racing engineer, F
 For questions or support, feel free to reach out:
 
 - **Email**: mihai@t1f1.com
-- **GitHub**: MihaiM21(https://github.com/MihaiM21)
 
 <p align=center>
 <b>Powered by TurnOneOfficial</b>
