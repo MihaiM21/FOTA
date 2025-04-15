@@ -6,10 +6,18 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <ApplicationIcon>lib\logo32.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
       <Folder Include="lib\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="lib\logo.png" />
+      <Resource Include="lib\logo.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
 </Project>
