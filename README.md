@@ -41,14 +41,14 @@ Whether you're a Formula One enthusiast, a data analyst, or a racing engineer, F
 
 ### Prerequisites
 
-- [.NET 6.0 SDK or later](https://dotnet.microsoft.com/download/dotnet/6.0)
+- [.NET 8.0 SDK or later](https://dotnet.microsoft.com/download/dotnet/8.0)
 - A valid token for authenticating requests to the server. The token can be bought from [TurnOne](https://t1f1.com/product/telemetry-token/)
 - If you want tokens for testing feel free to contact me at mihai@t1f1.com
 
 ## Installation Steps
 
 ### For regular users
-1. Download the release version and install it (Release ETA ~ 01/05/2025)
+1. Download the release version and install it.
 
 ### For Developers
 
