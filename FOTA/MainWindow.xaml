@@ -8,7 +8,6 @@
         Background="#191919"
         FontStyle="Normal"
         Foreground="White"
-        
         WindowStartupLocation="CenterScreen">
     
     <Window.Resources>
