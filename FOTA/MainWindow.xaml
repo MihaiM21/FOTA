@@ -1,6 +1,4 @@
-﻿
-
-<Window x:Class="FOTA.MainWindow"
+﻿<Window x:Class="FOTA.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FOTA Telemetry App" Height="720" Width="1280"
