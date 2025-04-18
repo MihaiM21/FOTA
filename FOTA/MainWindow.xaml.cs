@@ -164,6 +164,7 @@ namespace FOTA
 
         private async void ExecuteRequest_Click(object sender, RoutedEventArgs e)
         {
+            // Data needed to be sent to the server
             string baseUrl = "https://api.t1f1.com/generate_plot";
             string plotType = PlotTypeComboBox.Text;
             string year = YearComboBox.Text;
