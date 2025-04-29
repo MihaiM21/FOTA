@@ -249,7 +249,7 @@
             <!-- Round -->
             <StackPanel Orientation="Horizontal" Margin="0, 5">
                 <TextBlock Text="Round:" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                <ComboBox x:Name="RoundComboBox" Width="200" Margin="34,0,0,0">
+                <ComboBox x:Name="RoundComboBox" Width="200" Margin="34,0,0,0" SelectionChanged="RoundComboBox_OnSelectionChanged">
                     
                 </ComboBox>
             </StackPanel>    
