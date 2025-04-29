@@ -7,6 +7,7 @@ using Microsoft.Win32;
 using System.Net.Http.Json;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows.Controls;
 
 namespace FOTA
 {
@@ -55,6 +56,8 @@ namespace FOTA
                     T1TextBlock.Visibility = Visibility.Collapsed;
                     T2TextBlock.Visibility = Visibility.Collapsed;
                 }
+                
+                EventTypeModifier("test");
             });
             
             
@@ -161,7 +164,79 @@ namespace FOTA
                 }
             });    
         }
+        // Check if the round has Sprint and Sprint Qualifying
+        private void RoundComboBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Sprint races nr: 2, 6, 13, 19, 21, 22
+            Dispatcher.InvokeAsync(() =>
+            {
+                EventTypeModifier("test");
+            });
+            
+        }
 
+        private void EventTypeModifier(string input)
+        {
+            string selectedRound = ExtractRoundNumber(RoundComboBox.Text);
+            EventTypeComboBox.Items.Clear();
+            if (selectedRound == "2" || selectedRound == "6" || selectedRound == "13" || selectedRound == "19" ||
+                selectedRound == "21" || selectedRound == "22")
+            {
+                // For every plot type now
+                if (PlotTypeComboBox.Text == "Top speed")
+                {
+                    EventTypeComboBox.Items.Add("FP1");
+                    EventTypeComboBox.Items.Add("SQ");
+                    EventTypeComboBox.Items.Add("S");
+                    EventTypeComboBox.Items.Add("Q");
+                    EventTypeComboBox.Items.Add("R");
+                }
+                else if (PlotTypeComboBox.Text == "Team pace" || PlotTypeComboBox.Text == "Strategy" ||
+                         PlotTypeComboBox.Text == "Driver laptimes" ||
+                         PlotTypeComboBox.Text == "Drivers laptimes distribution" ||
+                         PlotTypeComboBox.Text == "Position changes")
+                {
+                    EventTypeComboBox.Items.Add("S");
+                    EventTypeComboBox.Items.Add("R");
+                }
+                else if (PlotTypeComboBox.Text == "Throttle graph" ||
+                         PlotTypeComboBox.Text == "Drivers track comparison" || PlotTypeComboBox.Text == "Speed trace")
+                {
+                    EventTypeComboBox.Items.Add("FP1");
+                    EventTypeComboBox.Items.Add("SQ");
+                    EventTypeComboBox.Items.Add("Q");
+                }
+                
+                
+            }
+            else
+            {
+                if (PlotTypeComboBox.Text == "Top speed")
+                {
+                    EventTypeComboBox.Items.Add("FP1");
+                    EventTypeComboBox.Items.Add("FP2");
+                    EventTypeComboBox.Items.Add("FP3");
+                    EventTypeComboBox.Items.Add("Q");
+                    EventTypeComboBox.Items.Add("R");
+                }
+                else if (PlotTypeComboBox.Text == "Team pace" || PlotTypeComboBox.Text == "Strategy" ||
+                         PlotTypeComboBox.Text == "Driver laptimes" ||
+                         PlotTypeComboBox.Text == "Drivers laptimes distribution" ||
+                         PlotTypeComboBox.Text == "Position changes")
+                {
+                    EventTypeComboBox.Items.Add("R");
+                }
+                else if (PlotTypeComboBox.Text == "Throttle graph" ||
+                         PlotTypeComboBox.Text == "Drivers track comparison" || PlotTypeComboBox.Text == "Speed trace")
+                {
+                    EventTypeComboBox.Items.Add("FP1");
+                    EventTypeComboBox.Items.Add("FP2");
+                    EventTypeComboBox.Items.Add("FP3");
+                    EventTypeComboBox.Items.Add("Q");
+                }
+                
+            }
+        }
         private async void ExecuteRequest_Click(object sender, RoutedEventArgs e)
         {
             // Data needed to be sent to the server
@@ -292,5 +367,7 @@ namespace FOTA
             Match match = Regex.Match(roundText, @"\d+");
             return match.Success ? match.Value : string.Empty;
         }
+
+        
     }
 }
