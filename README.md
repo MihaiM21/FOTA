@@ -5,7 +5,7 @@
 <h1 align="center">Formula One Telemetry Analysis - FOTA</h1>
 
 <p align=center>
-<b>Powered by TurnOneOfficial -</b>
+<b>Powered by Turn One -</b>
 <a href="https://www.t1f1.com">t1f1.com</a>
 </p>
 
@@ -124,5 +124,5 @@ For questions or support, feel free to reach out:
 - **Email**: mihai@t1f1.com
 
 <p align=center>
-<b>Powered by TurnOneOfficial</b>
+<b>Powered by Turn One</b>
 </p>
